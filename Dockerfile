@@ -1,10 +1,3 @@
-# DESCRIPTION:	SSH client via tor network
-# AUTHORS:		Gregoire MOLVEAU <gregoire.molveau@gmail.com>
-# USAGE:
-#	# Run your SSH command
-#	docker run --rm -it -v $HOME/.ssh/id_rsa:/id_rsa:ro gmolveau/ssh-tor ssh -i /id_rsa -v user@example.com
-#
-
 FROM alpine:latest
 
 RUN apk add --update --no-cache tor netcat-openbsd openssh-client && \
